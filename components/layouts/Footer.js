@@ -1,5 +1,5 @@
 const Footer = () => (
-<footer className="page-footer font-small cyan darken-3">
+<footer className="i-footer font-small cyan darken-3">
 	{/* Footer Elements */}
 	<div className="container text-center">
 		{/* Grid row*/}
