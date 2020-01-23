@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.scss';
+
 const Hero = ({ products }) => (
 	<div className="i-featured-wrapper">
 			{products &&  products.map(item=>(

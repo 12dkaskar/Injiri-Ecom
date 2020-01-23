@@ -1,0 +1,7 @@
+{
+    "dev": "now dev",
+    "dev:server": "nodemon server.js",
+    "build": "next build",
+    "inspect": "node --inspect server.js",
+    "start": "next start"
+}
