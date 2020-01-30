@@ -31,19 +31,19 @@ const Menu = () => {
 	} );
 
 	return (
-		<ul className="wpd-main-nav">
-			<li className="wpd-main-nav__list">
-				<Link href="/login"><a className="wpd-main-nav__link">Login</a></Link>
+		<ul className="i-main-nav">
+			<li className="i-main-nav__list">
+				<Link href="/login"><a className="i-main-nav__link">Login</a></Link>
 			</li>
-			<li className="wpd-main-nav__list">
-				<Link href="/register"><a className="wpd-main-nav__link">Register</a></Link>
+			<li className="i-main-nav__list">
+				<Link href="/register"><a className="i-main-nav__link">Register</a></Link>
 			</li>
 			<li className="wpd-main-nav__list">
 				<Link href="/my-account"><a className="wpd-main-nav__link">MyAccount</a></Link>
 			</li>
 			{ loggedIn ? (
-				<li className="wpd-main-nav__list">
-					<a className="wpd-main-nav__link" onClick={ handleLogout }>Logout</a>
+				<li className="i-main-nav__list">
+					<a className="i-main-nav__link" onClick={ handleLogout }>Logout</a>
 				</li>
 			) : '' }
 		</ul>

@@ -3,7 +3,10 @@
 }
 
 .product-container {
-	text-align: center;
+	// text-align: center;
+	a{
+		display: block;
+	}
 }
 
 @media screen and ( max-width: 500px ) {
@@ -20,11 +23,12 @@
 
 .product-link {
 	cursor: pointer;
-    color: #333333;
+	color: #333333;
+	display: block;
 }
 
 .product-image {
-	max-width: 240px;
+	width: 100%;
 }
 .product-name {
 	margin: 16px;

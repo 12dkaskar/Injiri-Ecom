@@ -31,3 +31,20 @@
 		font-size: 1.25em;
 	}
 }
+
+.categories{
+	// max-width: 250px;
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li{
+			padding: 0;
+			a{
+				padding: 0;
+				margin-bottom: 25px;
+				display: inline-block;
+			}
+		}
+	}
+}

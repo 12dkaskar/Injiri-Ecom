@@ -3,8 +3,8 @@
  */
 
 const config = {
-	siteUrl: 'http://testo.local',
-	graphqlUrl: 'http://testo.local/graphql',
+	siteUrl: 'http://localhost:8888/injiri',
+	graphqlUrl: 'http://localhost:8888/injiri/graphql',
 	postCodeLocale: 'IN',
 	authTokenName: 'wp-decoupled/user' ,
 };
