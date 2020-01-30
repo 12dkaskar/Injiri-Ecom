@@ -2,7 +2,7 @@ import React from 'react';
 import countryList from './country-list';
 import Error from "./Error";
 
-const Billing = ( { input, handleOnChange } ) => {
+const Billing = ( { input, handleOnChange, usedIn } ) => {
 	return (
 		<React.Fragment>
 			{/*Name*/}
@@ -109,19 +109,22 @@ const Billing = ( { input, handleOnChange } ) => {
 				</div>
 			</div>
 			{/*	Create an Account */}
+			{usedIn === 'customer_address' &&
 			<div className="form-check">
 				<label className="form-check-label">
 					<input onChange={ handleOnChange } className="form-check-input" name="createAccount" type="checkbox"/>
 						Create an account?
 				</label>
 			</div>
-			<h2 className="mt-4 mb-4">Additional Information</h2>
-			{/* Order Notes */}
+			}
+			<h2 className="mt-4 mb-4">Additional Information</h2>}
+				{/* Order Notes */}
+			{ usedIn === 'customer_address' &&
 			<div className="form-group">
 				<label htmlFor="order-notes">Order Notes</label>
 				<textarea onChange={ handleOnChange } defaultValue={ input.orderNotes } name="orderNotes" className="form-control wd-checkout-textarea" id="order-notes" rows="4"/>
 				<Error errors={ input.errors } fieldName={ 'orderNotes' }/>
-			</div>
+			</div>}
 		</React.Fragment>
 	);
 };

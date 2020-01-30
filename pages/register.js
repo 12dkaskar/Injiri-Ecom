@@ -27,7 +27,8 @@ const REGISTER_USER = gql`
         id
         name
         email
-        nicename
+		nicename
+		firstName
       }
     }
   }

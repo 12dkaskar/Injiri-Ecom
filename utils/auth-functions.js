@@ -20,7 +20,8 @@ export const isUserValidated = () => {
 			userLoggedInData = authTokenData;
 		}
 	}
-
+	// console.log({userLoggedInData});
+	
 	return userLoggedInData;
 
 };

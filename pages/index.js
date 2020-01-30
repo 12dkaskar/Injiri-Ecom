@@ -4,6 +4,7 @@ import client from '../components/ApolloClient';
 import gql from 'graphql-tag';
 import AddToCartButton from "../components/cart/AddToCartButton";
 import Hero from "../components/home/Hero";
+import Categories from "../components/home/Hero";
 
 /**
  * GraphQL products query.
@@ -65,7 +66,7 @@ const Index = ( props ) => {
 	return (
 		<Layout>
 			<Hero/>
-			{/*<Categories/>*/}
+			<Categories/>
 			<NewProducts products={ products } />
 		</Layout>
 	);

@@ -38,6 +38,9 @@ const Menu = () => {
 			<li className="wpd-main-nav__list">
 				<Link href="/register"><a className="wpd-main-nav__link">Register</a></Link>
 			</li>
+			<li className="wpd-main-nav__list">
+				<Link href="/my-account"><a className="wpd-main-nav__link">MyAccount</a></Link>
+			</li>
 			{ loggedIn ? (
 				<li className="wpd-main-nav__list">
 					<a className="wpd-main-nav__link" onClick={ handleLogout }>Logout</a>

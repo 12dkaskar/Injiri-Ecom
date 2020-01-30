@@ -1,17 +1,36 @@
 const next = require( 'next' );
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
 const express = require( 'express' );
 const { createReadStream } = require('fs');
 const { join } = require( 'path' );
 const { parse } = require('url');
 
-const port = 3001;
+const port = 3004;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next( { dev } );
 const handle = app.getRequestHandler();
 
+
+const corsOptions = {
+	origin:'http://localhost:3001',
+	credentials: true
+}
+
 app.prepare()
 	.then( () => {
 		const server = express();
+
+		server.use(cookieParser())
+
+		server.options('*', cors())
+	
+		// var corsOptions = {
+		// 	origin: 'http://localhost:3000',
+		// 	credentials: true // <-- REQUIRED backend setting
+		//   };
+		  server.use(cors(corsOptions));
+
 
 		// For Service Worker Request
 		server.get( '/service-worker.js', ( req, res ) => {
